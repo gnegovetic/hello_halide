@@ -1,7 +1,7 @@
 # hello_halide
 
 ## Objectives
-The objective of the project to demonstrate a realistic production-ready implementation of an image processing algorithm using Halide. These include:
+The objective of this project is to demonstrate a realistic production-ready implementation of an image processing algorithm using Halide. This includes:
 - Use state-of-the-art auto-scheduler for optimal performance
 - Create fully compiled code with no runtime dependencies 
 - Check Halide implementation correctness against baseline C++ implementation
@@ -33,6 +33,9 @@ The algorithm is a basic contrast adjustment of a grayscale image. For a given i
 
 ## Code organization
 Halide code is split into two generated functions: one to calculate the minimum and maximum of the pixel values, and another to apply the scaling. 
+
+## Build process
+We first compile the Halide code into a generator. Then we run the generator to create a static library for a specific platform target. Finally, we compile a test app that links in the Halide generated binary. This test app we can run to benchmark performance and check correctness. 
 
 ## Checking runtime dependencies
 ``` otool -L contrastAdjustTest ```
