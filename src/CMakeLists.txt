@@ -2,11 +2,11 @@ cmake_minimum_required(VERSION 3.13)
 project(ContrastAdjust)
 
 #find_package(Halide REQUIRED)
-set(HELIDE_SUPPORT_PATH /opt/homebrew/Cellar/halide/12.0.1)
+set(HELIDE_SUPPORT_PATH /opt/homebrew/Cellar/halide/13.0.4)
 set(GENERATED_CONTRAST_ADJUST contrast_adjust)
 set(GENERATED_MINMAX min_max)
 
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
 add_compile_options(-std=c++17 -fno-rtti)
 
 #### Generator

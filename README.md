@@ -23,10 +23,10 @@ make
 ## Example output
 ```
 ./contrastAdjustTest 
-Output pixel value range: [0:255], time: 0.014047 s
-Halide Output pixel value range: [0:255], time: 0.000385 s
+Output pixel value range: [0:255], time: 0.008957 s
+Halide Output pixel value range: [0:255], time: 0.000332 s
 ```
-In this case, we achieved 36x speedup over C++ code
+In this case, we achieved 27x speedup over optimized C++ code
 
 ## Algorithm
 The algorithm is a basic contrast adjustment of a grayscale image. For a given image, the pixel values are linearly scaled to maximize the dynamic range of [0-255] pixel values. 
